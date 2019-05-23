@@ -39,8 +39,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-#requirements = python2, kivy==1.9.1, docutils, requests
-#requirements = python2, kivy, requests, python-escpos, pillow
+
 requirements = python2, kivy, requests, numpy, opencv
 
 # (str) Custom source folders for requirements
@@ -52,7 +51,6 @@ requirements = python2, kivy, requests, numpy, opencv
 
 # (str) Presplash of the application
 presplash.filename = ./images/presplash.png
-#presplash.filename = ./presplash.png
 
 # (str) Icon of the application
 icon.filename = ./images/bola.png
@@ -68,7 +66,7 @@ orientation = portrait
 #
 
 #
-author = A Banca
+author = Israel de Oliveira
 
 # change the major version of python used by the app
 osx.python_version = 2.7
@@ -81,7 +79,7 @@ osx.kivy_version = 1.10.0
 # Android specific
 #
 
-# (bool) Indicate if the application should be fullscreen or not
+2# (bool) Indicate if the application should be fullscreen or not
 fullscreen = 1
 
 # (string) Presplash background color (for new android toolchain)
@@ -93,7 +91,6 @@ fullscreen = 1
 
 # (list) Permissions
 android.permissions = CAMERA
-#android.permissions = INTERNET, BLUETOOTH, BLUETOOTH_ADMIN, RECEIVE_BOOT_COMPLETED, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE, CHANGE_NETWORK_STATE, CHANGE_WIFI_STATE
 
 # (int) Android API to use
 android.api = 15
@@ -237,51 +234,8 @@ android.arch = armeabi-v7a
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 1
+log_level = 0
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
 
-# (str) Path to build artifact storage, absolute or relative to spec file
-# build_dir = ./.buildozer
-
-# (str) Path to build output (i.e. .apk, .ipa) storage
-# bin_dir = ./bin
-
-#    -----------------------------------------------------------------------------
-#    List as sections
-#
-#    You can define all the "list" as [section:key].
-#    Each line will be considered as a option to the list.
-#    Let's take [app] / source.exclude_patterns.
-#    Instead of doing:
-#
-#[app]
-#source.exclude_patterns = license,data/audio/*.wav,data/images/original/*
-#
-#    This can be translated into:
-#
-#[app:source.exclude_patterns]
-#license
-#data/audio/*.wav
-#data/images/original/*
-#
-
-
-#    -----------------------------------------------------------------------------
-#    Profiles
-#
-#    You can extend section / key with a profile
-#    For example, you want to deploy a demo version of your application without
-#    HD content. You could first change the title to add "(demo)" in the name
-#    and extend the excluded directories to remove the HD content.
-#
-#[app@demo]
-#title = My Application (demo)
-#
-#[app:source.exclude_patterns@demo]
-#images/hd/*
-#
-#    Then, invoke the command line with the "demo" profile:
-#
-#buildozer --profile demo android debug
