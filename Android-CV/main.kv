@@ -1,0 +1,24 @@
+<MyLayout>:
+    orientation:'vertical'
+    BoxLayout:
+        orientation: 'vertical'
+        Camera2:
+            index:0
+            resolution:(640,480) # 640,480
+            id:camera2
+            play:False
+            orientation: 'vertical'
+        TextInput:
+            id: sizer
+            text: '40'
+            size_hint_x: 1
+            size_hint_y: 0.1
+            multiline: False
+            font_size: self.height *.48
+        Spinner:
+            id: nmHaar
+            size_hint_x: 1
+            size_hint_y: 0.1
+            text: "~"
+            values: "Face (Light Version)","Face Frontal","Face (Intell)","Olhos","Olho Esquerdo","Olho Direito","Oculos","Sorriso","Corpo Todo","Corpo (inferior)","Corpo (membros superiores)","Placa Veicular (Russa)","Placa Veicular (Brazil)","Face de Gatos","Bola Futebol","Armas (Guns)"
+            on_text: app.change_haar(self.text)
