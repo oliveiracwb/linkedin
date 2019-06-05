@@ -1,3 +1,13 @@
+/*
+----------------------------------------------------------------------------
+ Classification with Multi Layer Perceptron and  Oracle PLSQL
+   Compile this Package and run:
+begin
+   PKG_MLP_CLASSIFIER.execute; 
+end;
+----------------------------------------------------------------------------
+*/
+
 CREATE OR REPLACE PACKAGE PKG_MLP_CLASSIFIER IS
 
      TYPE T_WEIGHT IS TABLE OF NUMERIC(20, 10) INDEX BY BINARY_INTEGER;
@@ -37,9 +47,9 @@ CREATE OR REPLACE PACKAGE BODY PKG_MLP_CLASSIFIER IS
           OUTPUT_LAYER T_NODE;
      BEGIN
           DBMS_OUTPUT.PUT_LINE('===========================================================');
-          DBMS_OUTPUT.PUT_LINE('     [ Rede Neural ] MLP com ORACLE 12g (vers„o 1.0)');
+          DBMS_OUTPUT.PUT_LINE('     [ Rede Neural ] MLP com ORACLE 12g (vers√£o 1.0)');
           DBMS_OUTPUT.PUT_LINE('Aprendizado Supervisionado de Rede Perceptron Multicamadas ');
-          DBMS_OUTPUT.PUT_LINE('com retropropagaÁ„o via SQL para problema de ClassificaÁ„o');
+          DBMS_OUTPUT.PUT_LINE('com retropropaga√ß√£o via SQL para problema de Classifica√ß√£o');
           DBMS_OUTPUT.PUT_LINE(' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ');
           DBMS_OUTPUT.PUT_LINE('Autor: Israel de oliveira - 2019 (Licenca Apache v2)');
           DBMS_OUTPUT.PUT_LINE('https://www.linkedin.com/in/israeloliveira2035/');
